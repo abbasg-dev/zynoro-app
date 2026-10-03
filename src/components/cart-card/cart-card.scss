@@ -1,0 +1,170 @@
+$primary-color: #3424ac;
+$secondary-color: #4c4a78;
+$border-color: #e2e8f0;
+
+.cart-card {
+  display: table-row;
+  border-bottom: 1px solid $border-color;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Ensure all direct children behave strictly as table cells on desktop */
+.cart-card > div,
+.cart-card > img {
+  display: table-cell;
+  padding: 16px;
+  vertical-align: middle;
+  color: $secondary-color;
+  font-size: 14px;
+}
+
+.product-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0;
+}
+
+.product-name {
+  font-weight: 500;
+  color: $secondary-color;
+}
+
+.quantity {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 12px;
+
+  .quantity-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100px;
+  }
+}
+
+.quantity-input {
+  width: 100px;
+  padding: 6px 8px;
+  border: 1px solid rgba(52, 36, 172, 0.3);
+  border-radius: 4px;
+  color: $primary-color;
+  font-weight: 600;
+  text-align: center;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+
+  &:focus {
+    border-color: $primary-color;
+  }
+}
+
+.remove-product {
+  width: 100px;
+  padding: 5px;
+  background-color: transparent;
+  color: $primary-color;
+  border: 1px solid rgba(52, 36, 172, 0.3);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  margin-bottom: 0;
+
+  &:hover {
+    background-color: rgba(52, 36, 172, 0.08);
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+}
+
+.product-price,
+.subtotal {
+  font-weight: 600;
+  color: $secondary-color;
+}
+
+/* MOBILE CARD LAYOUT (<768px) */
+@media (max-width: 768px) {
+  .cart-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    position: relative;
+  }
+
+  .cart-card > div,
+  .cart-card > img {
+    display: block;
+    padding: 0;
+  }
+
+  .product-image {
+    width: 75px;
+    height: 75px;
+    margin-right: 14px;
+  }
+
+  .product-name {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 600;
+    padding-right: 10px;
+    line-height: 1.3;
+  }
+
+  .quantity {
+    width: 100%;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed $border-color;
+
+    .quantity-wrapper {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .quantity-input {
+    width: 70px;
+  }
+
+  .remove-product {
+    width: auto;
+    padding: 6px 12px;
+  }
+
+  .product-price {
+    display: none !important; // Hide unit price on mobile to save space
+  }
+
+  .subtotal {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 15px;
+
+    &::before {
+      content: "Subtotal:";
+      font-weight: 400;
+      color: #6b7280;
+    }
+  }
+}

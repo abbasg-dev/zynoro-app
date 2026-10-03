@@ -1,0 +1,109 @@
+.swiper-component {
+  position: relative;
+  height: 550px;
+
+  .carousel-item {
+    background-color: #c7c0ff;
+    height: 550px;
+    position: relative;
+
+    &.active {
+      display: block;
+      height: 550px;
+    }
+
+    .swiper-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .swiper-wave {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+
+  h2 {
+    font-family: Poppins, Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    max-width: 520px;
+    margin: 0 auto 12px;
+    color: #1e1b4b;
+    line-height: 1.25;
+  }
+
+  h6 {
+    font-family: Poppins, Helvetica, Arial, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #4c4a78;
+    margin-bottom: 28px;
+    line-height: 1.5;
+  }
+
+  .rounded-pill {
+    border: 0;
+    font-family: Poppins, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: #ffffff;
+    background-color: #4f46e5; /* Clean, modern indigo */
+    padding: 14px 48px;
+    box-shadow: 0px 4px 12px rgba(79, 70, 229, 0.35);
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      background-color: #3730a3;
+      transform: translateY(-1px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 480px;
+
+    .carousel-item,
+    .carousel-item.active {
+      height: 480px;
+    }
+
+    .swiper-content {
+      padding: 20px 15px;
+
+      .get-started {
+        h2 {
+          font-size: 1.4rem;
+          margin-bottom: 8px;
+        }
+
+        h6 {
+          font-size: 0.9rem;
+          margin-bottom: 16px;
+        }
+
+        .rounded-pill {
+          padding: 10px 28px;
+          font-size: 0.875rem;
+        }
+      }
+
+      img[alt="laptop"] {
+        width: 220px !important;
+      }
+
+      img[alt="drone"] {
+        height: 180px !important;
+        width: auto !important;
+      }
+
+      img[alt="connector"] {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.orders-page-wrapper {
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 80px);
+  padding-bottom: 40px;
+
+  .orders-header {
+    .orders-title {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+
+    .orders-subtitle {
+      font-size: 0.95rem;
+      color: #6b7280;
+    }
+  }
+
+  .orders-grid-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+
+    .ag-grid-container {
+      height: 60vh;
+      min-height: 400px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .orders-page-wrapper {
+    padding-bottom: 20px;
+
+    .orders-header {
+      text-align: center;
+      margin-bottom: 1.25rem !important;
+
+      .orders-title {
+        font-size: 1.45rem;
+      }
+
+      .orders-subtitle {
+        font-size: 0.875rem;
+      }
+    }
+
+    .orders-grid-card {
+      padding: 8px !important;
+      border-radius: 6px;
+
+      .ag-grid-container {
+        height: 65vh;
+        min-height: 350px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .orders-page-wrapper {
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .orders-header {
+      .orders-title {
+        font-size: 1.3rem;
+      }
+    }
+
+    .orders-grid-card {
+      padding: 4px !important;
+
+      .ag-grid-container {
+        height: 70vh;
+      }
+    }
+  }
+}

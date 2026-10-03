@@ -1,0 +1,86 @@
+.ag-root-wrapper {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  border-radius: unset;
+  overflow: hidden;
+
+  .ag-header {
+    background: #f8f9fc;
+    border-bottom: 2px solid #e1e5ee;
+
+    &-cell {
+      font-weight: 600;
+      text-align: center;
+      color: #4a5568;
+    }
+  }
+
+  .ag-row {
+    transition: background 0.2s;
+
+    &:hover {
+      background: #e2e4f1;
+    }
+
+    // .ag-cell:not(.no-center) {
+    //   text-align: center;
+    // }
+  }
+
+  .ag-checkbox-input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ag-checkbox-input {
+      visibility: hidden;
+    }
+
+    &::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+      border: 1px solid #8a8a8a;
+      background: #fff;
+      display: inline-block;
+    }
+
+    &.ag-checked {
+      &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        background-color: #007bff;
+        position: absolute;
+      }
+
+      &::before {
+        border-color: #007bff;
+      }
+    }
+  }
+}
+
+.bordered-grid {
+  .ag-header {
+    background: #f8f9fc;
+    border-bottom: 2px solid #e1e5ee;
+  }
+
+  .ag-row {
+    border-bottom: 1px solid #f0f0f0;
+
+    .ag-cell {
+      top: 50%;
+      transform: translateY(-50%);
+      height: auto;
+    }
+  }
+}
+
+.ag-grid-container {
+  position: relative;
+  height: 70vh;
+}

@@ -1,0 +1,9 @@
+export const HOME = "/";
+export const CART = "/cart";
+export const CHECKOUT = "/checkout";
+export const SUCCESS = "/success";
+export const LOGIN = "/login";
+export const REGISTER = "/register";
+export const PRODUCTS = "/products";
+export const PRODUCT_DETAILS = "/products/:id";
+export const ORDERS = "/orders";

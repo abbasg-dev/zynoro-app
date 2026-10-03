@@ -1,0 +1,17 @@
+<svg width="1000" height="1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4633D6"/>
+      <stop offset="100%" stop-color="#2E1E9D"/>
+    </linearGradient>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#2E1E9D" flood-opacity="0.30"/>
+    </filter>
+  </defs>
+  <polygon points="500,90 800,260 800,600 500,770 200,600 200,260"
+           fill="url(#hexGrad)" filter="url(#softShadow)"/>
+  <path d="M560 200 L370 480 L470 480 L430 660 L650 350 L540 350 Z" fill="#F7E519"/>
+  <circle cx="500" cy="90" r="18" fill="#F7E519"/>
+  <circle cx="500" cy="770" r="18" fill="#F7E519"/>
+  <text x="500" y="900" text-anchor="middle" font-family="Arial Rounded MT Bold, Arial, Helvetica, sans-serif" font-weight="900" font-size="165" letter-spacing="6" fill="#2E1E9D">ZYNORO</text>
+</svg>
